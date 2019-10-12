@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">IIRCF</string>
+    <string name="starbuzz_logo">Starbuzz LOGO</string>
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stories</item>
+    </string-array>
 </resources>
