@@ -12,7 +12,8 @@ import kotlinx.android.synthetic.main.activity_drink_category.*
 
 class DrinkCategoryActivity : AppCompatActivity() {
     companion object {
-        const val EXTRAS_ID = "id"
+        const val EXTRA_ID = "id"
+        const val EXTRA_POSITION = "position"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,8 @@ class DrinkCategoryActivity : AppCompatActivity() {
         //Передача напитка, выбранного пользователем
         list_drinks.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(this, DrinkActivity::class.java)
-            intent.putExtra(EXTRAS_ID,id)
+            intent.putExtra(EXTRA_POSITION,position)
+            intent.putExtra(EXTRA_ID,id)
             startActivity(intent)
         }
     }
