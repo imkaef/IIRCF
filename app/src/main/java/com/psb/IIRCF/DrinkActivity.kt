@@ -15,9 +15,9 @@ class DrinkActivity : AppCompatActivity() {
         setContentView(R.layout.activity_drink)
         val drinkid = getIntent().getIntExtra(DrinkCategoryActivity.EXTRA_ID, -1);
         val drinkposition=getIntent().getIntExtra(DrinkCategoryActivity.EXTRA_POSITION, -1);
-        val drink = Drink.drinks[drinkposition.toInt()]
-        name.setText(drinkid.toString())
-        description.setText(drinkposition.toString())
+        val drink = Drink.drinks[drinkid.toInt()]
+        name.setText(drink.name)
+        description.setText(drink.description)
         photo.setImageResource(drink.imageResourceId)
     }
 }
