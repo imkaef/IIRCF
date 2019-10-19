@@ -21,8 +21,8 @@ class TopLevelActivity : AppCompatActivity() {
     list_options.setOnItemClickListener(){
             parent, view, position, id ->
             if(position == 0){
-                //val intent = Intent(this, DrinkCategoryActivity::class.java)
-                //startActivity(intent)
+                val intent = Intent(this, DrinkCategoryActivity::class.java)
+                startActivity(intent)
             }
 
         }
